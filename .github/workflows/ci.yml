@@ -1,0 +1,30 @@
+name: pipeline
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Conventional Commit In Pull Requests
+        uses: ytanikin/PRConventionalCommits@1.2.0
+        with:
+          task_types: '["feat","fix","perf","docs","style","refactor","test","ci","revert"]'
+          add_label: 'false'
+
+#      - name: Conventional Commits Check
+#        uses: bilalshaikh42/action-conventional-commits@v2.0.1
+
+#      - name: Run commitlint
+#        uses: opensource-nepal/commitlint@v1
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.

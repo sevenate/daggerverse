@@ -18,8 +18,8 @@ jobs:
       - name: Conventional Commits Check
         uses: bilalshaikh42/action-conventional-commits@v2.0.1
 
-      - name: Run commitlint s
-        uses: opensource-nepal/commitlint@v1
+#      - name: Run commitlint
+#        uses: opensource-nepal/commitlint@v1
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4

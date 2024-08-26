@@ -15,8 +15,8 @@ jobs:
           task_types: '["feat","fix","perf","docs","style","refactor","test","ci","revert"]'
           add_label: 'false'
 
-      - name: Conventional Commits Check
-        uses: bilalshaikh42/action-conventional-commits@v2.0.1
+#      - name: Conventional Commits Check
+#        uses: bilalshaikh42/action-conventional-commits@v2.0.1
 
 #      - name: Run commitlint
 #        uses: opensource-nepal/commitlint@v1
